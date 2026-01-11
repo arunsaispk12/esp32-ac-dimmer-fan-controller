@@ -1,0 +1,92 @@
+# ESP-IDF Build System
+build/
+sdkconfig
+sdkconfig.old
+*.bin
+*.elf
+*.map
+
+# ESP-IDF Dependencies
+dependencies.lock
+managed_components/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# C/C++
+*.o
+*.a
+*.d
+*.su
+*.obj
+*.exe
+*.out
+*.app
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# KiCad
+*.bak
+*.kicad_pcb-bak
+*-save.kicad_pcb
+*-save.kicad_sch
+*.kicad_prl
+*.kicad_pro-bak
+fp-info-cache
+_autosave-*
+\#auto_saved_files\#
+
+# KiCad 3D models cache
+*.3dshapes/
+*.pretty/
+
+# Gerber and fabrication outputs (optional - uncomment if you don't want to version control these)
+# *.gbr
+# *.drl
+# *.pdf
+
+# Logs and reports
+*.log
+*.csv.bak
+
+# OS specific
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Backup files
+*.backup
+*~
+
+# Documentation builds
+docs/_build/
+site/
+
+# Test outputs
+test_results/
+coverage/
+
+# Hardware manufacturing files (if generated)
+hardware/manufacturing/
+
+# Personal notes (optional)
+NOTES.md
+TODO.txt

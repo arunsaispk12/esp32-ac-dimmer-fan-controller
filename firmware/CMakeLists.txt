@@ -1,0 +1,8 @@
+# ESP32 AC Dimmer Fan Controller
+# Top-level CMakeLists.txt
+
+cmake_minimum_required(VERSION 3.16)
+
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+
+project(ac_dimmer)

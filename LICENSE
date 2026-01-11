@@ -1,0 +1,82 @@
+MIT License
+
+Copyright (c) 2025 ESP32 AC Dimmer Fan Controller Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+IMPORTANT SAFETY DISCLAIMER:
+
+This project involves potentially lethal mains AC voltage (110-240V AC).
+
+Building, testing, or using this device can result in:
+- Electric shock
+- Fire
+- Death
+- Property damage
+
+BY USING THIS SOFTWARE AND/OR HARDWARE DESIGNS, YOU ACKNOWLEDGE THAT:
+
+1. You are solely responsible for your safety and the safety of others
+2. You have the necessary knowledge and experience to work with mains voltage
+3. You will follow all applicable electrical codes and safety regulations
+4. You will use appropriate safety equipment and procedures
+5. The authors and contributors assume NO LIABILITY for any injury, death,
+   or property damage resulting from the use of this project
+6. This project is provided for EDUCATIONAL PURPOSES ONLY
+7. No warranty is provided regarding the safety or fitness of this design
+8. Professional installation by a licensed electrician is recommended
+9. You use this project entirely AT YOUR OWN RISK
+
+IF YOU DO NOT UNDERSTAND AND ACCEPT THESE RISKS, DO NOT USE THIS PROJECT.
+
+The MIT License above applies to the software code and hardware designs only.
+It does NOT imply that the physical device is safe to build or use.
+
+Building this device may void warranties, violate electrical codes, or be
+illegal in your jurisdiction. Consult local regulations before proceeding.
+
+================================================================================
+
+PATENT NOTICE:
+
+Some phase-control dimming techniques may be covered by patents in certain
+jurisdictions. Users are responsible for ensuring they have the right to
+build and use this device in their location.
+
+================================================================================
+
+REGULATORY COMPLIANCE:
+
+This is a DIY project and has NOT been tested or certified for:
+- UL (Underwriters Laboratories)
+- CE (Conformité Européenne)
+- FCC (Federal Communications Commission)
+- Any other regulatory standards
+
+Commercial use or sale of devices based on this design may require
+certification and is the responsibility of the manufacturer.
+
+================================================================================
+
+For questions about safety, see docs/SAFETY.md
+For technical support, see docs/TROUBLESHOOTING.md
+
+⚡ HIGH VOLTAGE - PROCEED WITH EXTREME CAUTION ⚡

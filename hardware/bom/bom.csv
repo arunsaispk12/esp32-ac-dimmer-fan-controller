@@ -1,0 +1,103 @@
+Reference,Quantity,Description,Value,Part Number,Manufacturer,Package,Notes,Supplier,Approx Cost (USD)
+"U1, U2",2,Optocoupler Random Phase,MOC3021,MOC3021,Fairchild/ON Semi,DIP-6,"5000V isolation, critical for safety",Mouser/Digi-Key,$0.50 each
+Q1,1,TRIAC 600V 16A Isolated Tab,BTA16-600B,BTA16-600B,STMicroelectronics,TO-220AB,"Must be 'B' suffix (isolated tab), not regular BTA16",Mouser/Digi-Key,$1.50
+"D1, D2, D3, D4",4,Rectifier Diode 1A 1000V,1N4007,1N4007,Generic,DO-41,Standard rectifier diode,Any supplier,$0.05 each
+R1,1,Resistor 330Ω 2W,330Ω 2W,Generic,Generic,Axial,Wire-wound or metal oxide film preferred,Any supplier,$0.15
+"R2, R3",2,Resistor 330Ω 1/4W,330Ω 1/4W,Generic,Generic,Axial,"Metal film, 1% tolerance",Any supplier,$0.02 each
+R4,1,Resistor 180Ω 1/2W,180Ω 1/2W,Generic,Generic,Axial,Metal film,Any supplier,$0.05
+R5,1,Resistor 1kΩ 1/4W,1kΩ 1/4W,Generic,Generic,Axial,Metal film,Any supplier,$0.02
+R6,1,Resistor 47Ω 3W,47Ω 3W,Generic,Generic,Axial,Wire-wound or cement resistor,Any supplier,$0.20
+R7,1,Resistor 10kΩ 1/4W,10kΩ 1/4W,Generic,Generic,Axial,Metal film,Any supplier,$0.02
+C1,1,Capacitor Ceramic 100nF 50V,100nF,Generic,Generic,Radial,"X7R or Y5V dielectric, 5mm pitch",Any supplier,$0.05
+C2,1,Capacitor Ceramic 10nF 630V,10nF,Generic,Generic,Radial,"High voltage rating critical, 5mm pitch",Any supplier,$0.10
+C3,1,Capacitor Film X2 47nF 630V,47nF X2,Various,Various,Radial,"MUST be X2 rated for across-mains, 15mm pitch, safety critical",Mouser/Digi-Key,$0.50
+MOV1,1,Varistor 275V AC,275V,Various,Littelfuse/EPCOS,Radial,"For 240V mains, use 150V for 120V mains, 14mm diameter",Mouser/Digi-Key,$0.30
+F1,1,Fuse Fast-Blow 5A 250V,5A,Various,Littelfuse/Bussmann,5×20mm,Fast-blow (F) type mandatory,Any supplier,$0.15
+FH1,1,Fuse Holder PCB Mount,5×20mm,Various,Generic,PCB Mount,Panel mount also acceptable,Any supplier,$0.30
+HS1,1,Heatsink TO-220,<7°C/W,Various,Aavid/Fischer,TO-220,"Minimum thermal resistance 7°C/W, black anodized preferred",Mouser/Digi-Key,$1.00
+"TB1, TB2",2,Terminal Block 2-position,5.08mm pitch,Various,Phoenix/Degson,Screw Terminal,"10A rating minimum, 300V rated",Any supplier,$0.40 each
+TB3,1,Terminal Block 3-position,2.54mm pitch,Various,Generic,Screw Terminal,"For ESP32 connections (ZC, Trigger, GND)",Any supplier,$0.25
+,1,Thermal Paste,,,Arctic/Noctua,1g packet,Required for TRIAC heatsink installation,Any supplier,$0.50
+,1,ESP32 Development Board,,ESP32-DevKitC,Espressif,Module,"Any ESP32 board with GPIO34 and GPIO25, USB programming",AliExpress/Amazon,$5.00
+,1,USB Cable Micro-B,,,Generic,Cable,For programming ESP32,Any supplier,$1.00
+,1,Enclosure ABS/Polycarbonate,,Various,Generic,Box,"Min IP20, ventilated, ~100×80×40mm",Any supplier,$5.00
+,1,AC Power Cord with Plug,,,Generic,Cable,"Rated for mains voltage, with appropriate plug for region",Any supplier,$2.00
+,4,M3 Mounting Screws,,,Generic,Hardware,For PCB and heatsink mounting,Hardware store,$0.10 total
+,2,M3 Standoffs 10mm,,,Generic,Hardware,For PCB mounting in enclosure,Hardware store,$0.20 total
+,1,Wire 18 AWG Stranded Black,1m,,Generic,Wire,"600V rated, for mains connections",Hardware store,$0.50
+,1,Wire 18 AWG Stranded White,1m,,Generic,Wire,"600V rated, for mains connections",Hardware store,$0.50
+,1,Heat Shrink Tubing Assortment,,,Generic,Various,"Various sizes for insulating connections",Any supplier,$2.00
+,1,Warning Label HIGH VOLTAGE,,,Generic,Sticker,"Multiple labels, weatherproof",Amazon/eBay,$1.00
+,1,Cable Gland/Strain Relief,PG9 or PG11,,Generic,Cable Gland,"For AC input and output wires",Any supplier,$0.50 each
+
+Notes:
+- All resistors metal film 1% tolerance unless noted otherwise
+- All capacitors rated for at least 2x operating voltage
+- X2 capacitor (C3) is safety-critical - DO NOT SUBSTITUTE with non-rated capacitor
+- TRIAC must be isolated tab version (BTA16-600B) - non-isolated (BTA16-600) is dangerous
+- MOC3021 must be 5000V isolation rating - verify datasheet
+- Fuse must be fast-blow type - slow-blow inadequate for safety
+- Terminal blocks must be rated for mains voltage (300V+)
+- All mains-voltage components must meet safety standards (UL/VDE/CE)
+
+Sourcing Tips:
+1. Purchase from authorized distributors (Mouser Digi-Key Farnell Newark) for critical components
+2. Generic passive components OK from budget suppliers
+3. Avoid counterfeit semiconductors - verify authentic source
+4. Buy extra fuses (5-10) for testing and replacement
+5. Consider buying components in small quantities first for prototyping
+
+Total Estimated Cost (Single Unit): $18-25 USD
+Total Estimated Cost (10 Units): $12-18 USD per unit
+Total Estimated Cost (100 Units): $8-12 USD per unit
+
+Alternative Bridge Rectifier:
+- Instead of 4× 1N4007 separate diodes use pre-packaged bridge rectifier:
+  - Part: DB107 (1A 1000V bridge)
+  - Package: DIP-4
+  - Cost: $0.20
+  - Easier to install less prone to polarity errors
+
+High Power Variant (400W+ loads):
+- Replace BTA16-600B with BTA24-600B or BTA41-600B
+- Increase fuse to 10A
+- Use heavier heatsink (<5°C/W)
+- Increase wire gauge to 14 AWG
+- Verify all components rated for increased current
+
+60Hz Version:
+- No component changes required
+- Update firmware: AC_FREQUENCY=60 AC_HALF_PERIOD=8333
+
+Dual Channel Version:
+- Duplicate: Q1 U2 R4 R5 R6 C2 C3 HS1 TB2 (TRIAC circuit)
+- Add: Second fuse MOV terminal block
+- Share: U1 (zero-cross detector)
+- Add: Second GPIO on ESP32 for trigger
+
+Safety Stock Recommendations:
+- Keep spare fuses (consumable)
+- Keep spare TRIAC (can fail)
+- Keep spare optocouplers (can fail)
+- Keep spare MOV (degrades over time)
+
+Testing Components:
+- 40-60W incandescent lamp for initial testing (NOT included in BOM)
+- Multimeter CAT III rated
+- Oscilloscope (recommended)
+- Isolation transformer (recommended)
+- Variac (recommended)
+
+Regional Variations:
+North America (120V 60Hz):
+- MOV: Use 150V rating instead of 275V
+- Fuse: Can use 10A for same load power
+- All other components identical
+
+Europe/Asia/Australia (240V 50Hz):
+- Use components as specified in BOM
+- Ensure power cord has appropriate plug for region
+- Check local electrical codes for installation requirements
+
+Last Updated: 2025-01-11
+BOM Version: 1.0
