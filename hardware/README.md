@@ -20,20 +20,26 @@ Circuit schematics in various formats:
 ### `/pcb`
 
 PCB design files:
-- KiCad PCB layout files (.kicad_pcb)
-- Gerber files for manufacturing
+- `ac_dimmer.kicad_pcb` - KiCad PCB layout file
+- `README.md` - PCB documentation and specifications
+- `FABRICATION_NOTES.md` - Manufacturing requirements
+- Gerber files for manufacturing (generated)
 - Drill files
 - PDF plots (top, bottom, silkscreen)
 
 **Design specifications:**
-- **Board size:** ~80mm × 50mm (typical)
+- **Board size:** 150mm × 100mm
 - **Layers:** 2-layer (suitable for DIY fabrication)
-- **Copper weight:** 1oz (35µm) minimum
-- **Finish:** HASL or ENIG
-- **Soldermask:** Required
-- **Silkscreen:** Required (safety markings)
-- **Minimum trace/space:** 0.3mm / 0.3mm
+- **Copper weight:** 1oz (35µm) minimum, 2oz recommended
+- **Finish:** HASL lead-free or ENIG
+- **Soldermask:** Both sides required (green, black, or blue)
+- **Silkscreen:** Both sides required (white) with safety markings
+- **Minimum trace width:** 0.2mm (signal), 2.0mm (mains power)
+- **Minimum trace spacing:** 0.2mm (signal), 8.0mm (mains to low voltage)
 - **Minimum drill:** 0.3mm
+- **Isolation barrier:** 8mm creepage distance enforced
+
+**See [pcb/README.md](pcb/README.md) for complete PCB documentation.**
 
 ### `/bom`
 
@@ -140,25 +146,28 @@ AC Mains Input
 
 ## PCB Manufacturing Notes
 
+**Complete fabrication specifications:** See [pcb/FABRICATION_NOTES.md](pcb/FABRICATION_NOTES.md)
+
 ### Specifications for Fab House
 
 ```
 Board Parameters:
-- Dimensions: [TBD based on final design]
+- Dimensions: 150mm × 100mm (±0.2mm)
 - Layers: 2
-- Copper Weight: 1oz (35µm)
-- Material: FR-4, Tg 130°C minimum
-- Thickness: 1.6mm standard
-- Surface Finish: HASL lead-free or ENIG
-- Soldermask: Both sides (green, black, or blue)
+- Copper Weight: 1oz (35µm) standard, 2oz (70µm) recommended
+- Material: FR-4, Tg 130°C minimum (Tg 150°C recommended)
+- Thickness: 1.6mm standard (±0.16mm)
+- Surface Finish: HASL lead-free (recommended) or ENIG
+- Soldermask: Both sides (green recommended for inspection)
 - Silkscreen: Both sides (white)
-- Minimum Trace Width: 0.4mm
-- Minimum Trace Spacing: 0.4mm
+- Minimum Trace Width: 0.2mm (signal), 2.0mm (mains)
+- Minimum Trace Spacing: 0.2mm (signal), 8.0mm (HV to LV)
 - Minimum Hole Size: 0.3mm
-- Via Process: Tented
+- Via Process: Tented or plugged
 - Edge Connector: None
 - Castellated Holes: None
 - Impedance Control: Not required
+- Special Requirements: 8mm creepage distance critical
 ```
 
 ### Recommended Manufacturers
